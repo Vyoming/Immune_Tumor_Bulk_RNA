@@ -60,22 +60,22 @@ diffexp:
   # contrasts for the deseq2 results method
   contrasts:
     aa-vs-control:
-      - aa
+      - VP16
       - control
     pge2-vs-control:
-      - pge2
+      - CPT1aKO
       - control
     pge2-vs-aa:
-      - pge2
-      - aa
+      - CPT1aKO
+      - VP16
 
 fgsea:
   #do the gene set files have descriptions?
   descriptions: "yes"
   #msigdb categories
   msigdb_categories:
-    - "C1"
-    - "C4"
+    - "C2"
+    - "C7"
   #gene_set files
   gene_sets: ""
 
