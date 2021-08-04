@@ -1,0 +1,10 @@
+sample	unit	condition	individual	fq1	fq2	strandedness
+Id1_control	rep1	control	id1	reads/Id_01_S1_R1_001.fastq.gz	reads/Id_01_S1_R2_001.fastq.gz	reverse
+Id7_control	rep2	control	id2	reads/Id_07_S7_R1_001.fastq.gz	reads/Id_07_S7_R2_001.fastq.gz	reverse
+Id10_control	rep3	control	id3	reads/Id_10_S10_R1_001.fastq.gz	reads/Id_10_S10_R2_001.fastq.gz	reverse
+Id2_aa	rep1	aa	id1	reads/Id_02_S2_R1_001.fastq.gz	reads/Id_02_S2_R2_001.fastq.gz	reverse
+Id8_aa	rep2	aa	id2	reads/Id_08_S8_R1_001.fastq.gz	reads/Id_08_S8_R2_001.fastq.gz	reverse
+Id11_aa	rep3	aa	id3	reads/Id_11_S11_R1_001.fastq.gz	reads/Id_11_S11_R2_001.fastq.gz	reverse
+Id3_pge2	rep1	pge2	id1	reads/Id_03_S3_R1_001.fastq.gz	reads/Id_03_S3_R2_001.fastq.gz	reverse
+Id9_pge2	rep2	pge2	id2	reads/Id_09_S9_R1_001.fastq.gz	reads/Id_09_S9_R2_001.fastq.gz	reverse
+Id12_pge2	rep3	pge2	id3	reads/Id_12_S12_R1_001.fastq.gz	reads/Id_12_S12_R2_001.fastq.gz	reverse

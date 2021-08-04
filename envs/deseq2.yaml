@@ -1,0 +1,28 @@
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - r-base 
+  - r-tidyverse
+  - r-cowplot
+  - r-svglite
+  - r-ggrepel 
+  - r-scales
+  - r-ggnewscale
+  - r-circlize
+  - r-dplyr
+  - r-readr
+  - r-janitor
+  - r-gsa
+  - r-msigdbr
+  - r-shades
+  - bioconductor-enhancedvolcano
+  - bioconductor-complexheatmap
+  - bioconductor-deseq2
+  - bioconductor-annotationhub
+  - bioconductor-apeglm
+  - bioconductor-limma
+  - bioconductor-rtracklayer
+  - bioconductor-fgsea
+  - bioconductor-biomaRt

@@ -1,0 +1,91 @@
+# path  to sequencing sample sheet:
+#   * TSV format
+#   * required columns: sample, condition, unit, fq1, fq2
+#   * optional: strandedness; other design columns for differential expression
+#               analysis
+# Column description:
+#   * sample: name of sample to analyse
+#   * condition: column to use for differerntial expression analysis, indicating
+#    for instance, if sample is "control" or "treatment"
+#    * units are technical replicates e.g. lanes, or sequencing of the
+#    same library/sample)
+#    * strandedness: indicates if and which type of stranded library protocol was
+#    used; possible values: empty, none, yes or reverse. none  for unstranded
+#    protocols, yes an reverse follow the nomenclature used in
+#    `htseq-count --reverse` which is referenced in STAR manual section 7,
+#    "Counting number of reads per gene".
+
+samples: samples.txt
+
+# Options for trimmining adapter sequences from reads; useful links below
+# https://bioinformatics.cvr.ac.uk/illumina-adapter-and-primer-sequences/
+# https://support.illumina.com/bulletins/2016/04/adapter-trimming-why-are-adapter-sequences-trimmed-from-only-the--ends-of-reads.html
+# https://www.neb.com/-/media/nebus/files/manuals/manuale7335.pdf?la=en&rev=e5b42b9bcb6b4d3db6d037f460677b84&hash=42A530FAD9A261341C840418A88BD08F67923CE7
+trimming:
+  # skip trimming: false or true
+  skip: false
+  # the sequencing adapter
+  adapter:
+      CTGACCTCAAGTCTGCACACGAGAAGGCTAG
+
+# reference files for alignment with STAR
+ref:
+  # the STAR index
+  index: "/grid/meyer/home/common/public/annotations/genome/mouse/GRCm38/STARINDEX"
+  # gtf file with transcripts
+  annotation: "/grid/meyer/home/common/public/annotations/genome/mouse/GRCm38/mouse.GRCm38.gtf"
+
+
+# Settings for PCA on rlog-normalised count data; all values indicate column
+# names in sample sheet
+#   * fill: column according to which points should be filled; needs to be set
+#   * color (optional): column according to which points should colored; only
+#   set if there is more than one column to visualise; points will then be
+#   filled as specified above and have a colored outline according to the column
+#   specified here. specify color: "" for no colored outline
+#   * labels (optional): column to use for labels of points in PCA;
+#   specify labels: "" for no labels
+pca:
+  # columns of sample sheet to use for PCA
+  fill: "condition"
+  color: ""
+  labels: "individual"
+
+diffexp:
+  # overall design for deseq2
+  design: " ~ individual + condition"
+  # organism name for annotation hub
+  organism: "mouse"
+  collapse: false
+  # contrasts for the deseq2 results method
+  contrasts:
+    aa-vs-control:
+      - aa
+      - control
+    pge2-vs-control:
+      - pge2
+      - control
+    pge2-vs-aa:
+      - pge2
+      - aa
+
+fgsea:
+  #do the gene set files have descriptions?
+  descriptions: "yes"
+  #msigdb categories
+  msigdb_categories:
+    - "C1"
+    - "C4"
+  #gene_set files
+  gene_sets: ""
+
+params:
+  star: ""
+  cutadapt-se: ""
+  cutadapt-pe: ""
+  #gene set enrichment (bool)
+  enrichment: true
+  # batch_adjust: column  from samples.txt to use for batch adjusting
+  # (e.g. batch, individual effect) of rlog-normalised counts (prior to PCA and
+  # heatmap)
+  batch_adjust: "individual"

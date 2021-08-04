@@ -1,0 +1,8 @@
+sample	unit	fq1	fq2	strandedness
+Id1-Thymus-TK_3a	rep1	/grid/meyer/home/chapin/201118_mouse_thymus/reads/Id1-Thymus-TK_3a_S1_R1_001.fastq.gz	/grid/meyer/home/chapin/201118_mouse_thymus/reads/Id1-Thymus-TK_3a_S1_R2_001.fastq.gz	reverse
+Id2-Thymus-TK_3b	rep2	/grid/meyer/home/chapin/201118_mouse_thymus/reads/Id2-Thymus-TK_3b_S2_R1_001.fastq.gz	/grid/meyer/home/chapin/201118_mouse_thymus/reads/Id2-Thymus-TK_3b_S2_R2_001.fastq.gz	reverse
+Id3-Thymus-TK_4a	rep1	/grid/meyer/home/chapin/201118_mouse_thymus/reads/Id3-Thymus-TK_4a_S3_R1_001.fastq.gz	/grid/meyer/home/chapin/201118_mouse_thymus/reads/Id3-Thymus-TK_4a_S3_R2_001.fastq.gz	reverse
+Id4-Thymus-TK_4b	rep2	/grid/meyer/home/chapin/201118_mouse_thymus/reads/Id4-Thymus-TK_4b_S4_R1_001.fastq.gz	/grid/meyer/home/chapin/201118_mouse_thymus/reads/Id4-Thymus-TK_4b_S4_R2_001.fastq.gz	reverse
+Id5-Thymus-TK_5a	rep1	/grid/meyer/home/chapin/201118_mouse_thymus/reads/Id5-Thymus-TK_5a_S5_R1_001.fastq.gz	/grid/meyer/home/chapin/201118_mouse_thymus/reads/Id5-Thymus-TK_5a_S5_R2_001.fastq.gz	reverse
+Id6-Thymus-TK_5b	rep2	/grid/meyer/home/chapin/201118_mouse_thymus/reads/Id6-Thymus-TK_5b_S6_R1_001.fastq.gz	/grid/meyer/home/chapin/201118_mouse_thymus/reads/Id6-Thymus-TK_5b_S6_R2_001.fastq.gz	reverse
+Id7-Thymus-TK_6a	rep1	/grid/meyer/home/chapin/201118_mouse_thymus/reads/Id7-Thymus-TK_6a_S7_R1_001.fastq.gz	/grid/meyer/home/chapin/201118_mouse_thymus/reads/Id7-Thymus-TK_6a_S7_R2_001.fastq.gz	reverse
