@@ -59,15 +59,9 @@ diffexp:
   collapse: false
   # contrasts for the deseq2 results method
   contrasts:
-    aa-vs-control:
+    VP16-vs-control:
       - VP16
-      - control
-    pge2-vs-control:
-      - CPT1aKO
-      - control
-    pge2-vs-aa:
-      - CPT1aKO
-      - VP16
+      - Control
 
 fgsea:
   #do the gene set files have descriptions?
